@@ -1,0 +1,11 @@
+{
+  "name": "mowbrokers",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MowBrokers — static HTML site + Supabase backend. No build step.",
+  "scripts": {
+    "test": "node --test tests/pricing.test.mjs",
+    "sync": "sh scripts/sync-pricing.sh",
+    "serve": "python3 -m http.server 8080 --directory public"
+  }
+}

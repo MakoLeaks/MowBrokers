@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Request a free re-service · MowBrokers</title>
+<meta name="description" content="Request a free re-service under the MowBrokers guarantee.">
+<meta name="theme-color" content="#13283D">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/config.js"></script>
+
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main" class="wrap">
+<div style="max-width:640px" class="stack">
+  <p class="eyebrow">MowBrokers re-service guarantee</p>
+  <h1>Missed spot or weeds back?</h1>
+  <p class="muted">If a scheduled cut is missed or done poorly, or weeds come back between treatment visits, your pro comes back within two business days at no charge. Enter the reference code from your booking email.</p>
+  <form id="claim-form" novalidate style="gap:12px">
+    <div class="row">
+      <label for="c-ref">Reference code<input type="text" id="c-ref" name="ref" placeholder="MB-7K2Q9X" autocapitalize="characters" required></label>
+      <label for="c-phone">Phone on the booking<input type="tel" id="c-phone" name="phone" required></label>
+    </div>
+    <label for="c-desc">What was missed, or what's back?<textarea id="c-desc" name="description" maxlength="1000" placeholder="Back fence line wasn't trimmed on the last cut" required></textarea></label>
+    <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+    <p class="err" id="claim-err" role="alert" hidden></p>
+    <div class="btns"><button class="btn alt" type="submit">Request a free re-service</button></div>
+  </form>
+  <div class="banner ok" id="claim-done" role="status" hidden>Re-service requested. Your pro will come back within two business days, free of charge.</div>
+</div>
+</main>
+<div id="site-footer"></div>
+<script type="module">import { chrome } from "./assets/core.mjs"; chrome("reservice");</script>
+<script type=module src=assets/pages/reservice.mjs></script>
+</body>
+</html>

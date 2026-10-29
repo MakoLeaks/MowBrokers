@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Create a provider account · MowBrokers</title>
+<meta name="description" content="Create a MowBrokers provider account.">
+<meta name="theme-color" content="#13283D">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/config.js"></script>
+<meta name="robots" content="noindex">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main" class="wrap">
+<div class="stack" data-mode="signup" id="auth-root"><h1>Create your provider account</h1><p class="muted">Next you'll fill in your company, license, insurance and prices.</p><form id="auth-form" novalidate style="max-width:380px;gap:12px">
+  <label for="a-name" data-signup>Your name<input type="text" id="a-name" name="name" autocomplete="name"></label>
+  <label for="a-email">Email<input type="email" id="a-email" name="email" autocomplete="email" required></label>
+  <label for="a-pass">Password<input type="password" id="a-pass" name="password" minlength="8" required></label>
+  <p class="err" id="auth-err" role="alert" hidden></p>
+  <p class="banner ok" id="auth-msg" role="status" hidden></p>
+  <div class="btns"><button class="btn" type="submit" id="auth-submit">Continue</button><button type="button" class="linkbtn" id="forgot" data-login>Forgot password</button></div>
+</form><p class="small">Already have an account? <a href="login.html">Sign in</a></p></div>
+</main>
+<div id="site-footer"></div>
+<script type="module">import { chrome } from "./assets/core.mjs"; chrome("join");</script>
+<script type=module src=assets/pages/auth.mjs></script>
+</body>
+</html>

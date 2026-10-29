@@ -1,0 +1,4 @@
+# Netlify: publish the public folder as-is. No build step.
+[build]
+  publish = "public"
+  command = ""

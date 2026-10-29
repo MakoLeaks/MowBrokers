@@ -1,0 +1,11 @@
+# Used by the Supabase CLI when you run `supabase functions deploy`.
+# The webhook and daily job are called by Stripe and pg_cron, not by signed-in users,
+# so they check their own secrets instead of a Supabase login token.
+[functions.stripe-webhook]
+verify_jwt = false
+
+[functions.daily]
+verify_jwt = false
+
+[functions.public]
+verify_jwt = false

@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin.html
+Disallow: /portal.html
+Disallow: /profile.html
+Disallow: /booking.html
+Disallow: /book.html
+Disallow: /results.html
+
+Sitemap: https://mowbrokers.com/sitemap.xml

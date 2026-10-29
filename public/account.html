@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>My bookings · MowBrokers</title>
+<meta name="description" content="Get private links to your MowBrokers bookings: visit reports, receipts, re-service, pause or cancel.">
+<meta name="theme-color" content="#13283D">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/config.js"></script>
+
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main" class="wrap">
+<div style="max-width:640px" class="stack">
+  <p class="eyebrow">Your account</p>
+  <h1>My bookings</h1>
+  <p class="muted">There's no password to remember. Each booking has a private page with your visit reports, receipts and photos, where you can request a free re-service, add services, pause or cancel. Enter the email you booked with and we'll send you the links.</p>
+  <form id="links-form" novalidate style="gap:12px">
+    <label for="l-email">Email<input type="email" id="l-email" name="email" autocomplete="email" required></label>
+    <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+    <p class="err" id="links-err" role="alert" hidden></p>
+    <div class="btns"><button class="btn" type="submit">Email me my links</button></div>
+  </form>
+  <div class="banner ok" id="links-done" role="status" hidden>If that email has bookings with us, the links are on their way. Check your inbox (and spam) in a minute.</div>
+  <p class="small muted">Missed spot or weeds back? <a href="reservice.html">Request a free re-service</a> with your reference code and phone number.</p>
+</div>
+</main>
+<div id="site-footer"></div>
+<script type="module">import { chrome } from "./assets/core.mjs"; chrome("account");</script>
+<script type=module src=assets/pages/account.mjs></script>
+</body>
+</html>
