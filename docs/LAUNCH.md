@@ -2,7 +2,7 @@
 
 MowBrokers runs on its **own** Supabase project, separate from Bug Brokers. `mowbrokers.com` is registered at Namecheap and uses Netlify DNS (same nameservers as Bug Brokers); every URL below assumes it.
 
-**Status (Oct 29, 2026):** Supabase project `yavvbqmbuitggjhmxrev` is created with migrations 0001–0004 applied, both cron jobs scheduled and all five Edge Functions deployed. The site is on Netlify (project `mowbrokers`) at https://mowbrokers.com with HTTPS. Still to do: Edge Function secrets (step 5), Stripe (step 2), Resend/Twilio, the Auth URL settings in step 1.4, and the Stripe publishable key in `config.js`.
+**Status (Oct 30, 2026):** Supabase project `yavvbqmbuitggjhmxrev` has migrations 0001–0004, both cron jobs and all five Edge Functions. Auth Site URL is `https://mowbrokers.com` with redirect URLs for `profile.html` and `reset.html`. Secrets set: `SITE_URL`, `ALLOWED_ORIGINS`, `ADMIN_NOTIFY_EMAIL`. The site is on Netlify (project `mowbrokers`) at https://mowbrokers.com with HTTPS. Still to do: open a **separate** MowBrokers Stripe account (decided Oct 30; not the Bug Brokers one), then `STRIPE_SECRET_KEY`, the two webhooks (step 2) and the publishable key in `config.js`; Resend (`RESEND_API_KEY`, `EMAIL_FROM`) and Twilio.
 
 Budget an afternoon for steps 1–7. Twilio's text-message registration takes 1–3 weeks, so start it on day one; you can launch with email only. Do everything in **Stripe test mode** first, run the test script in step 8, then switch to live keys in step 9.
 
